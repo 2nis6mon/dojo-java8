@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio2;
+package org.dojo.java8.exercise2;
 
 import org.assertj.core.api.Condition;
 import org.dojo.java8.model.Person;
@@ -26,7 +26,7 @@ public class BasicCollectionOperationsTest {
     }
 
     @Test
-    public void should_remove_younger_than_20_persons() {
+    public void should_remove_married_people() {
         //when
         BasicCollectionOperations.removeMarriedPeople(persons);
 
