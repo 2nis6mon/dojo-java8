@@ -34,7 +34,7 @@ public class FileOperationsTest {
     public void should_find_file_path_by_filename() throws IOException {
         Path fileWithName = FileOperations.findRecursivelyFileByName(".", "FileOperations.java");
 
-        assertThat(fileWithName).isEqualTo(Paths.get("./src/main/java/org/dojo/java8/ejercicio4/FileOperations.java"));
+        assertThat(fileWithName).isEqualTo(Paths.get("./src/main/java/org/dojo/java8/exercise5/FileOperations.java"));
     }
 
     @Test(expected = FileNotFoundException.class)
