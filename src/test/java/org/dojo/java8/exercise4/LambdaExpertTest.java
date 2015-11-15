@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio5;
+package org.dojo.java8.exercise4;
 
 import org.assertj.core.data.MapEntry;
 import org.junit.Test;
@@ -57,7 +57,7 @@ public class LambdaExpertTest {
     }
 
     @Test
-    public void check_retrieveAverageAgeOfAllTheChildren() {
+    public void check_firstTwoYoungerChildsByName() {
         assertThat(lambdaExpert.firstTwoYoungerChildsByName().toString()).isEqualTo("[{\"name\":\"Adèle\",\"age\":1}, {\"name\":\"Adèle\",\"age\":1}]");
     }
 }

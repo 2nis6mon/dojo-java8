@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio5;
+package org.dojo.java8.exercise4;
 
 import org.dojo.java8.model.Child;
 import org.dojo.java8.model.Person;
@@ -75,8 +75,7 @@ public class LambdaExpert {
 		return count;
 	}
 
-	// TODO use Collectors.collectingAndThen, Collectors.groupingBy with
-	// Collectors.counting
+	// TODO use Collectors.collectingAndThen, Collectors.groupingBy with Collectors.counting
 	// TODO to complete the refactor use max map and orElse
 	public int retrieveMostCommonAge() {
 		Map<Integer, Integer> numberPeopleByAge = new HashMap<>();
