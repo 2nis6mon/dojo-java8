@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio3;
+package org.dojo.java8.exercise3;
 
 import org.dojo.java8.model.Person;
 import org.dojo.java8.model.PersonAgeStatistic;

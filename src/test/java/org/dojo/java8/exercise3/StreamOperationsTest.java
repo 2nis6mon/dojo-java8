@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio3;
+package org.dojo.java8.exercise3;
 
 import org.assertj.core.api.Condition;
 import org.dojo.java8.model.Person;
@@ -56,7 +56,7 @@ public class StreamOperationsTest {
 
 
     @Test
-    public void check_retrieveMarriedPeopleByLanguage() {
+    public void check_retrieveMarriedPeopleByAge() {
         // when
         Map<Integer, List<Person>> result = streamOperations.retrieveMarriedPeopleByAge();
 
