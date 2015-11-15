@@ -1,4 +1,4 @@
-package org.dojo.java8.ejercicio4;
+package org.dojo.java8.exercise5;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
