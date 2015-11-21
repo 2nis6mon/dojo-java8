@@ -49,7 +49,7 @@ public class LambdaExpert {
 		return persons.stream()
 				.collect(Collectors.collectingAndThen(
 						Collectors.groupingBy(Person::getAge, Collectors.counting()),
-						integerLongMap -> integerLongMap.entrySet()))
+						Map::entrySet))
 				.stream()
 				.max(Comparator.comparing(Map.Entry::getValue))
 				.map(Map.Entry::getKey)
