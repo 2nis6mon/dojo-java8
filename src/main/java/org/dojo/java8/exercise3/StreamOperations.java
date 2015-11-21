@@ -33,7 +33,7 @@ public class StreamOperations {
                 .filter(person -> name.equals(person.getName()))
                 .filter(person -> surname.equals(person.getSurname()))
                 .findFirst()
-                .map(person -> person.getLanguage())
+                .map(Person::getLanguage)
                 .orElse(UNKNOWN_LANGUAGE);
     }
 
