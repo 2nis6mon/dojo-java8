@@ -10,7 +10,7 @@ import java.util.function.*;
 public class FunctionGenerator {
 
     public static Function<Integer, Integer> plusOneFunction() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new Function<Integer, Integer>() {
 
             @Override
@@ -21,7 +21,7 @@ public class FunctionGenerator {
     }
 
     public static Predicate<Integer> pairNumberPredicate() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new Predicate<Integer>() {
             @Override
             public boolean test(Integer integer) {
@@ -31,7 +31,7 @@ public class FunctionGenerator {
     }
 
     public static Consumer<int[]> incrementArrayValueConsumer() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new Consumer<int[]>() {
             @Override
             public void accept(int[] arrayValues) {
@@ -44,7 +44,7 @@ public class FunctionGenerator {
     }
 
     public static Supplier<Integer> todaySupplier() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new Supplier<Integer>() {
             @Override
             public Integer get() {
@@ -55,7 +55,7 @@ public class FunctionGenerator {
     }
 
     public static BiFunction<String, Integer, String> concatAsStringFunction() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new BiFunction<String, Integer, String>() {
 
             @Override
@@ -67,7 +67,7 @@ public class FunctionGenerator {
 
     // BinaryOperator is BiFunction with same generic type
     public static BinaryOperator<Integer> sumFunction() {
-        //TODO: replace with static method reference
+        //TODO replace with static method reference
         return new BinaryOperator<Integer>() {
 
             @Override
@@ -78,7 +78,7 @@ public class FunctionGenerator {
     }
 
     public static Consumer<String> addToListConsumer(List<String> list) {
-        //TODO: replace with instance method reference
+        //TODO replace with instance method reference
         return new Consumer<String>() {
             @Override
             public void accept(String value) {
@@ -88,7 +88,7 @@ public class FunctionGenerator {
     }
 
     public static Function<String, BigDecimal> stringToBiDecimalFunction() {
-        //TODO: replace with constructor reference
+        //TODO replace with constructor reference
         return new Function<String, BigDecimal>() {
             @Override
             public BigDecimal apply(String value) {
@@ -99,7 +99,7 @@ public class FunctionGenerator {
 
     // Comparator is also a FunctionalInterface that can be replaced by lambda syntax
     public static Comparator<String> byStringLengthComparator() {
-        //TODO: replace with lambda syntax
+        //TODO replace with lambda syntax
         return new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
