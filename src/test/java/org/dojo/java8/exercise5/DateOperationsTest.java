@@ -38,13 +38,13 @@ public class DateOperationsTest {
 
     //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
     private int computeAgeFor(String birthday, String currentDate) {
-        return DateOperations.age(parseDateJava7(birthday), parseDateJava7(currentDate));
+        return DateOperations.age(parseDateJava8(birthday), parseDateJava8(currentDate));
     }
 
     @Test
     //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
     public void should_compute_day_with_time() {
-        assertThat(DateOperations.dayDateWithTime(parseDateJava7("2013-07-08"), 15, 12, 3))
+        assertThat(DateOperations.dayDateWithTime(parseDateJava8("2013-07-08"), 15, 12, 3))
                 .isInSameDayAs("2013-07-08")
                 .isWithinHourOfDay(15)
                 .isWithinMinute(12)
@@ -54,7 +54,7 @@ public class DateOperationsTest {
     @Test
     //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
     public void should_add_duration() {
-        assertThat(DateOperations.addDuration(parseDateTimeJava7("2014-01-27T12:05:10"), 162))
+        assertThat(DateOperations.addDuration(parseDateTimeJava8("2014-01-27T12:05:10"), 162))
                 .isInSameDayAs("2014-01-27")
                 .isWithinHourOfDay(14)
                 .isWithinMinute(47)
@@ -64,9 +64,9 @@ public class DateOperationsTest {
     @Test
     //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
     public void should_return_true_when_days_are_equals() {
-        assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2015-01-27T12:05:10"), parseDateTimeJava7("2014-01-27T20:05:10"))).isFalse();
-        assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2014-01-27T12:05:10"), parseDateTimeJava7("2014-01-28T12:05:10"))).isFalse();
-        assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2014-01-27T12:05:10"), parseDateTimeJava7("2014-01-27T20:05:10"))).isTrue();
+        assertThat(DateOperations.dayAreEquals(parseDateTimeJava8("2015-01-27T12:05:10"), parseDateTimeJava8("2014-01-27T20:05:10"))).isFalse();
+        assertThat(DateOperations.dayAreEquals(parseDateTimeJava8("2014-01-27T12:05:10"), parseDateTimeJava8("2014-01-28T12:05:10"))).isFalse();
+        assertThat(DateOperations.dayAreEquals(parseDateTimeJava8("2014-01-27T12:05:10"), parseDateTimeJava8("2014-01-27T20:05:10"))).isTrue();
     }
 
     @Test
