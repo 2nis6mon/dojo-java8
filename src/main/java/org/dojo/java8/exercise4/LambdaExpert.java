@@ -10,7 +10,7 @@ public class LambdaExpert {
 
 	private List<Person> persons = PersonLibrary.getPersons("/person_data_with_children.json");
 
-	// TODO: use map, flatMap, sorted and limit
+	// TODO use map, flatMap, sorted and limit
 	public List<Child> firstTwoYoungerChildsByName() {
 		List<Child> allChildren = new ArrayList<>();
 
@@ -35,10 +35,10 @@ public class LambdaExpert {
 		}
 	}
 
-	// TODO: NOTE! DO NOT USE STREAMS
-	// TODO: refactor Map computation with Map merge method and you can
-	// eventually change loop by Iterator forEach method
-	// TODO: use static reference to the Integer sum method
+	// TODO NOTE! DO NOT USE STREAMS
+	// TODO refactor Map computation with Map merge method and you can
+	// TODO eventually change loop by Iterator forEach method
+	// TODO use static reference to the Integer sum method
 	public Map<String, Long> countWord(List<String> words) {
 
 		Map<String, Long> count = new HashMap<>();
@@ -56,7 +56,7 @@ public class LambdaExpert {
 		return count;
 	}
 
-	// TODO: NOTE! USE STREAMS
+	// TODO NOTE! USE STREAMS
 	// TODO use Collectors.groupingBy with Collectors.counting
 	public Map<String, Long> countWordStream(List<String> words) {
 
