@@ -19,7 +19,7 @@ import java.util.List;
 
 public class FileOperations {
 
-    //TODO: Replace By Files.lines, use static method reference
+    //TODO Replace By Files.lines, use static method reference
     public static List<User> loadUsersFromCsv(Path csvPath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(csvPath.toFile()))) {
             String line;
@@ -40,7 +40,7 @@ public class FileOperations {
         }
     }
 
-    //TODO:replace by Files.walk and remove visitor. Use Optional.orElseThrow for throw FileNotFoundException
+    //TODO Replace by Files.walk and remove visitor. Use Optional.orElseThrow for throw FileNotFoundException
     public static Path findRecursivelyFileByName(String path, String fileName) throws IOException {
         Path rootDirectory = Paths.get(path);
 

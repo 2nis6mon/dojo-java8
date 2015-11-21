@@ -16,7 +16,7 @@ public class DateOperations {
      * @return
      */
     public static Date parseDate(String date) {
-        //TODO: Replace with LocalDate and DateTimeFormatter
+        //TODO Replace with LocalDate and DateTimeFormatter
 
         try {  //SimpleDateFormat not thread safe must create new formater for each request
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
@@ -33,7 +33,7 @@ public class DateOperations {
      * @return
      */
     public static Date parseDateTime(String date) {
-        //TODO: Replace with LocalDateTime and DateTimeFormatter
+        //TODO Replace with LocalDateTime and DateTimeFormatter
         try {
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             return format.parse(date);
@@ -44,7 +44,7 @@ public class DateOperations {
 
     public static int age(Date birthday, Date now) {
 
-        //TODO: Replace with LocalDate and use Period
+        //TODO Replace with LocalDate and use Period
         Calendar calBirthday = Calendar.getInstance();
         calBirthday.setTime(birthday);
 
@@ -61,7 +61,7 @@ public class DateOperations {
 
     public static Date dayDateWithTime(Date dayDate, int hour, int minute, int second) {
 
-        //TODO: Replace dayDate by LocalDate and result by LocalDateTime
+        //TODO Replace dayDate by LocalDate and result by LocalDateTime
         Calendar calendarDayDate = Calendar.getInstance();
         calendarDayDate.setTime(dayDate);
 
@@ -73,7 +73,7 @@ public class DateOperations {
     }
 
     public static Date addDuration(Date date, int minute) {
-        //TODO: Replace By LocalDateTime
+        //TODO Replace By LocalDateTime
         Calendar calendarDate = Calendar.getInstance();
         calendarDate.setTime(date);
 
@@ -83,7 +83,7 @@ public class DateOperations {
     }
 
     public static boolean dayAreEquals(Date firstDateWithTime, Date secondDateWithTime) {
-        //TODO: Replace by LocalDateTime
+        //TODO Replace by LocalDateTime
         Calendar calendarDay1 = Calendar.getInstance();
         calendarDay1.setTime(firstDateWithTime);
 
@@ -95,7 +95,7 @@ public class DateOperations {
     }
 
     public static String convertToTimeZone(String dateWithTime, ZoneId timeZoneFrom, ZoneId timeZoneTo) {
-        //TODO: parse with LocalDateTime and use ZonedDateTime for conversion
+        //TODO parse with LocalDateTime and use ZonedDateTime for conversion
         try {
             SimpleDateFormat parserFrom = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             parserFrom.setTimeZone(TimeZone.getTimeZone(timeZoneFrom));
