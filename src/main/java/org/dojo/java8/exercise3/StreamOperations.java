@@ -84,6 +84,7 @@ public class StreamOperations {
     }
 
     // TODO Use Collector.summarizingInt
+    // TODO and use the result to make the new PersonAgeStatistic
     public PersonAgeStatistic generateAgeStatistic() {
         long count = 0;
         int min = Integer.MAX_VALUE;
