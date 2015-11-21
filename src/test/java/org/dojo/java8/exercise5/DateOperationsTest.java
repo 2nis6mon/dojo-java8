@@ -35,15 +35,14 @@ public class DateOperationsTest {
         assertThat(computeAgeFor("2010-01-28", "2014-02-06")).isEqualTo(4);
     }
 
+    //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
     private int computeAgeFor(String birthday, String currentDate) {
-        //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
-
         return DateOperations.age(parseDateJava7(birthday), parseDateJava7(currentDate));
     }
 
     @Test
+    //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
     public void should_compute_day_with_time() {
-        //TODO Change parseDateJava7 to parseDateJava8 for switch to localDate
         assertThat(DateOperations.dayDateWithTime(parseDateJava7("2013-07-08"), 15, 12, 3))
                 .isInSameDayAs("2013-07-08")
                 .isWithinHourOfDay(15)
@@ -52,8 +51,8 @@ public class DateOperationsTest {
     }
 
     @Test
+    //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
     public void should_add_duration() {
-        //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
         assertThat(DateOperations.addDuration(parseDateTimeJava7("2014-01-27T12:05:10"), 162))
                 .isInSameDayAs("2014-01-27")
                 .isWithinHourOfDay(14)
@@ -62,8 +61,8 @@ public class DateOperationsTest {
     }
 
     @Test
+    //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
     public void should_return_true_when_days_are_equals() {
-        //TODO Change parseDateTimeJava7 to parseDateTimeJava8 for switch to localDate
         assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2015-01-27T12:05:10"), parseDateTimeJava7("2014-01-27T20:05:10"))).isFalse();
         assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2014-01-27T12:05:10"), parseDateTimeJava7("2014-01-28T12:05:10"))).isFalse();
         assertThat(DateOperations.dayAreEquals(parseDateTimeJava7("2014-01-27T12:05:10"), parseDateTimeJava7("2014-01-27T20:05:10"))).isTrue();
