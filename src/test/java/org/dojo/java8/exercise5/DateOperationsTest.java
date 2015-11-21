@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
+import static org.dojo.java8.exercise5.tools.TemporalAccessorAssert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -16,7 +17,7 @@ public class DateOperationsTest {
 
     @Test
     public void should_parse_date() {
-        assertThat(DateOperations.parseDate("27/01/2014")).isInSameDayAs("2014-01-27");
+       assertThat(DateOperations.parseDate("27/01/2014")).isInSameDayAs("2014-01-27");
     }
 
     @Test
