@@ -26,47 +26,24 @@ public class BasicCollectionOperations {
         FIBONACCI_CACHE.put(2, 1L);
     }
 
-    //TODO :Refactor with Iterable forEach method
+    //TODO Refactor with Iterable forEach method
     public static void resetAge(List<Person> persons) {
-
-        for (Person person : persons) {
-            person.setAge(-1);
-        }
-
+        persons.forEach(person -> person.setAge(-1));
     }
 
-    //TODO :Refactor with Collection removeIf method and use method reference
+    //TODO Refactor with Collection removeIf method and use method reference
     public static void removeMarriedPeople(List<Person> persons) {
-        List<Person> personsToRemove = new ArrayList<>();
-
-        for (Person person : persons) {
-            if (person.isMarried()) {
-                personsToRemove.add(person);
-            }
-        }
-
-        persons.removeAll(personsToRemove);
+        persons.removeIf(person -> person.isMarried());
     }
 
-    //TODO :Refactor with List replaceAll method
+    //TODO Refactor with List replaceAll method
     public static void addOneDayToDates(List<LocalDate> localDates) {
-
-        for (int i = 0; i < localDates.size(); i++) {
-            LocalDate localDate = localDates.get(i);
-            LocalDate newDate = localDate.plusDays(1);
-
-            localDates.set(i, newDate);
-        }
+        localDates.replaceAll(localDate -> localDate.plusDays(1));
     }
 
-    //TODO : use Map getOrDefault method
+    //TODO Use Map getOrDefault method
     public static BigDecimal exchangeRateWithEuro(String isoCode) {
-        BigDecimal currencyByIsocode = CURRENCIES_BY_ISOCODE.get(isoCode);
-        if (currencyByIsocode != null) {
-            return currencyByIsocode;
-        }
-
-        return BigDecimal.ONE; //Default Currency is One (no conversion)
+        return CURRENCIES_BY_ISOCODE.getOrDefault(isoCode, BigDecimal.ONE);
     }
 
     public static List<Long> fibonacci(int expectedNumberResult) {
@@ -79,16 +56,8 @@ public class BasicCollectionOperations {
         return result;
     }
 
-    //TODO: Use Map computeIfAbsent method
+    //TODO Use Map computeIfAbsent method
     private static long fibonacciComputation(int number) {
-        if (FIBONACCI_CACHE.containsKey(number)) {
-            return FIBONACCI_CACHE.get(number);
-        }
-
-        long fibonacci = fibonacciComputation(number - 1) + fibonacciComputation(number - 2);
-
-        FIBONACCI_CACHE.put(number, fibonacci);
-
-        return fibonacci;
+        return FIBONACCI_CACHE.computeIfAbsent(number, i -> fibonacciComputation(i - 1) + fibonacciComputation(i - 2));
     }
 }
