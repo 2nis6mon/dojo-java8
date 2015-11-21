@@ -57,7 +57,7 @@ public class LambdaExpert {
 	}
 
 	// TODO NOTE! USE STREAMS
-	// TODO use Collectors.groupingBy with Collectors.counting
+	// TODO use Collectors.groupingBy with Collectors.counting in second argument
 	public Map<String, Long> countWordStream(List<String> words) {
 
 		Map<String, Long> count = new HashMap<>();
@@ -75,7 +75,7 @@ public class LambdaExpert {
 		return count;
 	}
 
-	// TODO use Collectors.collectingAndThen, Collectors.groupingBy with Collectors.counting
+	// TODO use Collectors.collectingAndThen, Collectors.groupingBy with Collectors.counting in second argument
 	// TODO to complete the refactor use max map and orElse
 	public int retrieveMostCommonAge() {
 		Map<Integer, Integer> numberPeopleByAge = new HashMap<>();
