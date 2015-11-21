@@ -33,7 +33,7 @@ public class BasicCollectionOperations {
 
     //TODO Refactor with Collection removeIf method and use method reference
     public static void removeMarriedPeople(List<Person> persons) {
-        persons.removeIf(person -> person.isMarried());
+        persons.removeIf(Person::isMarried);
     }
 
     //TODO Refactor with List replaceAll method
