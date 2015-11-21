@@ -26,7 +26,7 @@ public class BasicCollectionOperations {
         FIBONACCI_CACHE.put(2, 1L);
     }
 
-    //TODO :Refactor with Iterable forEach method
+    //TODO Refactor with Iterable forEach method
     public static void resetAge(List<Person> persons) {
 
         for (Person person : persons) {
@@ -35,7 +35,7 @@ public class BasicCollectionOperations {
 
     }
 
-    //TODO :Refactor with Collection removeIf method and use method reference
+    //TODO Refactor with Collection removeIf method and use method reference
     public static void removeMarriedPeople(List<Person> persons) {
         List<Person> personsToRemove = new ArrayList<>();
 
@@ -48,7 +48,7 @@ public class BasicCollectionOperations {
         persons.removeAll(personsToRemove);
     }
 
-    //TODO :Refactor with List replaceAll method
+    //TODO Refactor with List replaceAll method
     public static void addOneDayToDates(List<LocalDate> localDates) {
 
         for (int i = 0; i < localDates.size(); i++) {
@@ -59,7 +59,7 @@ public class BasicCollectionOperations {
         }
     }
 
-    //TODO : use Map getOrDefault method
+    //TODO Use Map getOrDefault method
     public static BigDecimal exchangeRateWithEuro(String isoCode) {
         BigDecimal currencyByIsocode = CURRENCIES_BY_ISOCODE.get(isoCode);
         if (currencyByIsocode != null) {
@@ -79,7 +79,7 @@ public class BasicCollectionOperations {
         return result;
     }
 
-    //TODO: Use Map computeIfAbsent method
+    //TODO Use Map computeIfAbsent method
     private static long fibonacciComputation(int number) {
         if (FIBONACCI_CACHE.containsKey(number)) {
             return FIBONACCI_CACHE.get(number);
