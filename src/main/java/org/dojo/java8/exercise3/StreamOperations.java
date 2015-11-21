@@ -65,7 +65,7 @@ public class StreamOperations {
         return personOrdered.subList(0, 10);
     }
 
-    // TODO Use filter and Collector.groupingBy
+    // TODO Use filter and Collectors.groupingBy
     public Map<Integer, List<Person>> retrieveMarriedPeopleByAge() {
         Map<Integer, List<Person>> marriedPeopleByAge = new HashMap<>();
         List<Person> personsByAge;
