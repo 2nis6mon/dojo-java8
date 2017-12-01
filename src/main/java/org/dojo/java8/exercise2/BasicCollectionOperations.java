@@ -46,6 +46,11 @@ public class BasicCollectionOperations {
         return CURRENCIES_BY_ISOCODE.getOrDefault(isoCode, BigDecimal.ONE);
     }
 
+    //TODO Use Map computeIfAbsent method
+    private static long fibonacciComputation(int number) {
+        return FIBONACCI_CACHE.computeIfAbsent(number, i -> fibonacciComputation(i - 1) + fibonacciComputation(i - 2));
+    }
+
     public static List<Long> fibonacci(int expectedNumberResult) {
         List<Long> result = new ArrayList<>(expectedNumberResult);
 
@@ -54,10 +59,5 @@ public class BasicCollectionOperations {
             result.add(fibonacciComputation(i));
         }
         return result;
-    }
-
-    //TODO Use Map computeIfAbsent method
-    private static long fibonacciComputation(int number) {
-        return FIBONACCI_CACHE.computeIfAbsent(number, i -> fibonacciComputation(i - 1) + fibonacciComputation(i - 2));
     }
 }
