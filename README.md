@@ -9,7 +9,7 @@ Dojo Java 8
 4. IDE JAVA (Eclipse, IntelliJ, ...)
 4. Clone the git repo : 
 ```
-git clone https://github.com/2nis6mon/dojo-java8.git dojo-java8
+git clone https://github.com/2nis6mon/dojo-java8.git
 ```
 5. Open the project on your IDE
 6. Run all the tests from your poject. If they are GREEN you are READY to START.
