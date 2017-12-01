@@ -69,16 +69,6 @@ public class BasicCollectionOperations {
         return BigDecimal.ONE; //Default Currency is One (no conversion)
     }
 
-    public static List<Long> fibonacci(int expectedNumberResult) {
-        List<Long> result = new ArrayList<>(expectedNumberResult);
-
-        for (int i = 1; i <= expectedNumberResult; i++) {
-
-            result.add(fibonacciComputation(i));
-        }
-        return result;
-    }
-
     //TODO Use Map computeIfAbsent method
     private static long fibonacciComputation(int number) {
         if (FIBONACCI_CACHE.containsKey(number)) {
@@ -90,5 +80,15 @@ public class BasicCollectionOperations {
         FIBONACCI_CACHE.put(number, fibonacci);
 
         return fibonacci;
+    }
+
+    public static List<Long> fibonacci(int expectedNumberResult) {
+        List<Long> result = new ArrayList<>(expectedNumberResult);
+
+        for (int i = 1; i <= expectedNumberResult; i++) {
+
+            result.add(fibonacciComputation(i));
+        }
+        return result;
     }
 }
