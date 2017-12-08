@@ -38,7 +38,7 @@ public class LambdaExpert {
 	// TODO NOTE! DO NOT USE STREAMS
 	// TODO refactor Map computation with Map merge method and you can
 	// TODO eventually change loop by Iterator forEach method
-	// TODO use static reference to the Integer sum method
+	// TODO use static reference to the Long sum method
 	public Map<String, Long> countWord(List<String> words) {
 
 		Map<String, Long> count = new HashMap<>();
