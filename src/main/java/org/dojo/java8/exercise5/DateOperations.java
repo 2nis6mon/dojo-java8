@@ -16,6 +16,7 @@ public class DateOperations {
      * @return
      */
     //TODO Replace with LocalDate and DateTimeFormatter
+    //TODO CHANGE DE RETURN TYPE TO LocalDate
     public static Date parseDate(String date) {
         try {  //SimpleDateFormat not thread safe must create new formater for each request
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
@@ -32,6 +33,7 @@ public class DateOperations {
      * @return
      */
     //TODO Replace with LocalDateTime and DateTimeFormatter
+    //TODO CHANGE DE RETURN TYPE TO LocalDateTime
     public static Date parseDateTime(String date) {
         try {
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -58,6 +60,7 @@ public class DateOperations {
     }
 
     //TODO Replace dayDate by LocalDate and result by LocalDateTime
+    //TODO CHANGE DE RETURN TYPE TO LocalDateTime
     public static Date dayDateWithTime(Date dayDate, int hour, int minute, int second) {
         Calendar calendarDayDate = Calendar.getInstance();
         calendarDayDate.setTime(dayDate);
@@ -70,6 +73,7 @@ public class DateOperations {
     }
 
     //TODO Replace By LocalDateTime
+    //TODO CHANGE DE RETURN TYPE TO LocalDateTime
     public static Date addDuration(Date date, int minute) {
         Calendar calendarDate = Calendar.getInstance();
         calendarDate.setTime(date);
